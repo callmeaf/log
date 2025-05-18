@@ -12,7 +12,7 @@ class LogJobActivity
      * @param HasLogJobActivity $job
      * @param Closure(object): void  $next
      */
-    public function handle(HasLogJobActivity $job, Closure $next)
+    public function handle($job,$next)
     {
         $next($job);
 
