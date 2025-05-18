@@ -30,8 +30,11 @@ class LogResource extends JsonResource
 //            'properties' => $this->properties,
             'changes' => $this->changes(),
             'created_at' => $this->created_at,
+            'created_at_text' => $this->createdAtText(),
             'updated_at' => $this->updated_at,
+            'updated_at_text' => $this->updatedAtText(),
             'deleted_at' => $this->deleted_at,
+            'deleted_at_text' => $this->deletedAtText(),
         ];
     }
 }
