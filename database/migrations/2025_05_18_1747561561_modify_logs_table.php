@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('activity_log', function (Blueprint $table) {
-            //
+            $table->string('causer_id')->nullable()->change();
+            $table->string('subject_id')->nullable()->change();
         });
     }
 
@@ -22,7 +23,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('activity_log',function (Blueprint $table) {
-            //
+            $table->unsignedBigInteger('causer_id')->nullable()->change();
+            $table->unsignedBigInteger('subject_id')->nullable()->change();
         });
     }
 };
