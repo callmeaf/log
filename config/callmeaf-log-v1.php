@@ -183,4 +183,11 @@ return [
              'excel' => \Callmeaf\Log\App\Imports\Admin\V1\LogsImport::class,
          ],
      ],
+    'facades' => [
+        [
+            'alias' => 'LoggerAct',
+            'service' => \Callmeaf\Log\App\Services\LogService::class,
+            'facade' => \Callmeaf\Log\App\Facades\LogFacade::class,
+        ],
+    ],
 ];
