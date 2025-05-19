@@ -19,7 +19,7 @@ class LogService
          * @var ActivityLogger $activity
          */
         $activity = $closure($activity);
-
-        return $activity->log("{$jobClass} has been executed.");
+        
+        return $activity->withProperty('job_type',$jobClass)->log("{$jobClass} has been executed.");
     }
 }
